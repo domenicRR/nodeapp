@@ -24,8 +24,9 @@ app.set('view engine','handlebars')
 
 app.use('/',indexRouter)
 app.use('/users', usersRouter);
-app.use(passport.initialize)
-app.use(passport.session())
+app.use("/public", express.static(__dirname + "/public"));
+//app.use(passport.initialize)
+//app.use(passport.session())
 
 
 

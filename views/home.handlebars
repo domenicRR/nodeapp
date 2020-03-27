@@ -1,1 +1,37 @@
-<h1>Example App: Home</h1>
+<script src="//cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="../public/js/playhls.js"></script>
+<h1>My HLS Video</h1>
+
+
+<video muted id="video1" width="800" height = "400" controls width="250" autoplay=true></video>
+<form>
+    <label for="hlsurl">HLS URL</label><br>
+    <input type="text" id="hlsurl" name="hlsurl"><br>
+    <input type="button" value="Submit" id="urlbutton">
+</form>
+
+<video muted id="video2" width="800" height = "400" controls width="250" autoplay=true></video>
+
+<form>
+    <label for="hlsurl2">HLS URL</label><br>
+    <input type="text" id="hlsurl2" name="hlsurl2"><br>
+    <input type="button" value="Submit" id="urlbutton2">
+</form>
+
+<script>
+
+    document.getElementById("urlbutton").onclick = function() {
+        url = document.getElementById("hlsurl").value
+        gethls(url,"video1")
+        //console.log(hlsurl.value)
+    }
+
+    document.getElementById("urlbutton2").onclick = function() {
+        url = document.getElementById("hlsurl2").value
+        gethls(url,"video2")
+        //console.log(hlsurl.value)
+    }
+
+//video.play()
+</script>
